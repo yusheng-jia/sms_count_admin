@@ -132,8 +132,8 @@ app.use(function(err, req, res, next) {
   });
 });
 
-var listener = server.listen(5001,function () {
-  console.log('Express server listening on port ' + 5001);
+var listener = server.listen(5002,function () {
+  console.log('Express server listening on port ' + 5002);
 });
 
 checkCaesarUI();
