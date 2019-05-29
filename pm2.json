@@ -1,6 +1,6 @@
 {
    "apps": {
-        "name": "caesar_ui",
+        "name": "sms_admin",
         "script": "./server/server.js",
         "cwd":"./"
     }
