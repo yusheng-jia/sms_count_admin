@@ -1,0 +1,35 @@
+<ol class="breadcrumb" breadcrumb="">
+  <li class="breadcrumb-item ng-scope active"><span>渠道接口管理</span></li>
+  <li class="breadcrumb-menu">
+    <div class="btn-group" role="group">
+      <a class="btn btn-outline-secondary" ng-click="faqTableNew()">
+        <i class="icon-plus"></i> &nbsp;创建渠道</a>
+    </div>
+  </li>
+</ol>
+<div class="container-fluid">
+  <div class="animated fadeIn">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12">
+        <table class="table table-bordered table-condensed">
+          <tr>
+            <th>渠道接口名称</th>
+            <th>接口有效期限</th>
+            <th>每日总访问量限制</th>
+            <th>操作</th>
+          </tr>
+          <tr ng-repeat="item in channels">
+            <td>{{item.name}}</td>
+            <td>{{item.valid}}</td>
+            <td>{{item.limit}}</td>
+            <td>
+              <button type="button" class="btn btn-sm btn-primary" ng-click="showEditDialog(item)">修改</button>
+              <button type="button" class="btn btn-sm btn-danger" ng-click="showDelDialog(item)"
+                confirm-click-title="删除问答对" confirm-click="您确认要删除问答对吗？">删除</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

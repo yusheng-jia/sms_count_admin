@@ -1,0 +1,37 @@
+<ol class="breadcrumb" breadcrumb="">
+    <li class="breadcrumb-item ng-scope active"><span>厂商管理</span></li>
+    <li class="breadcrumb-menu">
+      <div class="btn-group" role="group">
+        <a class="btn btn-outline-secondary" ng-click="faqTableNew()">
+          <i class="icon-plus"></i> &nbsp;创建厂商</a>
+      </div>
+    </li>
+  </ol>
+  <div class="container-fluid">
+    <div class="animated fadeIn">
+      <div class="row">
+        <div class="col-sm-12 col-lg-12">
+          <table class="table table-bordered table-condensed">
+            <tr>
+              <th>厂商名称</th>
+              <th>Id</th>
+              <th>Secret</th>
+              <th>合同期限</th>
+              <th>操作</th>
+            </tr>
+            <tr ng-repeat="item in vendors">
+              <td>{{item.name}}</td>
+              <td>{{item.clientid}}</td>
+              <td>{{item.secret}}</td>
+              <td>{{item.valid}}</td>
+              <td>
+                <button type="button" class="btn btn-sm btn-primary" ng-click="showEditDialog(item)">修改</button>
+                <button type="button" class="btn btn-sm btn-danger" ng-click="showDelDialog(item)"
+                  confirm-click-title="删除问答对" confirm-click="您确认要删除问答对吗？">删除</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

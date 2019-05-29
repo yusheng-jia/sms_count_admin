@@ -1,0 +1,7 @@
+{
+   "apps": {
+        "name": "caesar_ui",
+        "script": "./server/server.js",
+        "cwd":"./"
+    }
+}

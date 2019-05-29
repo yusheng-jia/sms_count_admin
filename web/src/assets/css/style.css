@@ -1,0 +1,129 @@
+.app-header.navbar .navbar-brand {
+  background-image: url("../img/logo.png");
+}
+
+canvas.chart {
+    display: inline-block!important;
+}
+
+.header-buttons {
+    color: #999;
+}
+
+.logout-buttons {
+  color: #fff;
+}
+
+.sidebar-toggler {
+  left: inherit !important;
+  right: 0px;
+}
+
+.aside-menu {
+    width: 350px;
+}
+
+@media (max-width: 991px) {
+    .aside-menu {
+        margin-right: 0px;
+        width: 250px;
+    }
+    .aside-menu-fixed .main, .aside-menu-fixed .app-footer {
+        margin-right: 250px !important;
+    }
+}
+
+.aside-menu-hidden .aside-menu {
+    margin-right: -350px;
+}
+
+.aside-menu-fixed .main, .aside-menu-fixed .app-footer {
+    margin-right: 350px;
+}
+
+.app-header.navbar .nav-item .nav-link, .app-header.navbar .nav-item .dropdown-toggle {
+    cursor: pointer;
+}
+
+.p-a-1 {
+    padding: 1rem!important;
+}
+
+.m-b-0, .m-y-0 {
+    margin-bottom: 0!important;
+}
+
+.m-t-h, .m-y-h {
+    margin-top: .5rem!important;
+}
+
+.td-middle {
+  vertical-align: middle !important;
+}
+
+.tag-success {
+    background-color: #4dbd74;
+}
+.faq_table{
+  background-color: #fff;
+}
+
+.con_ul{
+  /* height: 200px; */
+  margin-top: 20px;
+  min-height: 25rem;
+  max-height: 25rem;
+  overflow: scroll
+}
+.p_right{
+  text-align: right;
+  line-height: 30px;
+}
+.p_left{
+  line-height: 30px;
+  text-align: left
+}
+.con_li_odd{
+  background: #dafee0;
+  border: 0px;
+  padding: 8px 10px;
+  border-radius: 5px
+}
+.con_li_even{
+  background: #f1f0f2 ;
+  border: 0px;
+  padding: 8px 10px;
+  border-radius: 5px
+}
+.searchHighlight{
+  color: red;
+}
+
+.tag {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    vertical-align: baseline;
+}
+
+tags-input .tags .tag-item .remove-button {
+    color: #fff;
+}
+.list-group-item:hover, a.list-group-item:focus {text-decoration: none;background-color: rgb(245, 245, 245);}
+.list-group { margin-bottom:0px; }
+
+.alert-div{
+  position: fixed;
+  z-index: 9999;
+  right: 100px;
+  top: 5px;
+}
+.alert-text{
+@media (max-width: 991px) {
+  .sidebar-hidden .sidebar {
+      margin-left: -200px;
+  }
+}

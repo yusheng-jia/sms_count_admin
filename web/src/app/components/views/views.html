@@ -1,0 +1,33 @@
+<ol class="breadcrumb" breadcrumb="">
+    <li class="breadcrumb-item ng-scope active"><span>访问量配置</span></li>
+    <li class="breadcrumb-menu">
+      <div class="btn-group" role="group">
+        <a class="btn btn-outline-secondary" ng-click="faqTableNew()">
+          <i class="icon-plus"></i> &nbsp;创建配置</a>
+      </div>
+    </li>
+  </ol>
+  <div class="container-fluid">
+    <div class="animated fadeIn">
+      <div class="row">
+        <div class="col-sm-12 col-lg-12">
+          <table class="table table-bordered table-condensed">
+            <tr>
+              <th>厂商名称</th>
+              <th>聚道接口名称</th>
+              <th>每日总访问量限制</th>
+              <th>操作</th>
+            </tr>
+            <tr>
+              <td>C端短信拦截检验-安全卫士</td>
+              <td>2020-5-8</td>
+              <td>10000</td>
+              <td>
+                <button type="button" class="btn btn-primary" ng-click="showEditDialog(item)">访问量配置</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,64 @@
+<ol class="breadcrumb" breadcrumb="">
+  <li class="breadcrumb-item ng-scope active"><span>统计报表</span></li>
+</ol>
+<div class="container-fluid">
+  <div class="animated fadeIn">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12">
+        <form class="form-inline" ng-submit="submit()">
+          <div class="form-group col-sm-2">
+            <label class="form-control-label">厂商:&nbsp;</label>
+            <select class="form-control" name="" id="" ng-init="selVendor=vendors[0]" ng-options="x for x in vendors"
+              ng-model="selVendor"></select>
+          </div>
+          <div class="form-group col-sm-4">
+            <label class="form-control-label">渠道接口:&nbsp;</label>
+            <select class="form-control" name="" id="" ng-init="selChannel=channels[0]" ng-options="x for x in channels"
+              ng-model="selChannel"></select>
+          </div>
+          <div class="form-group col-sm-4">
+            <label class="form-control-label">查询日期范围:&nbsp;</label>
+            <input id="daterange" class="form-control col-sm-7" type="text" name="daterange" autocomplete="off"/>
+          </div>
+          <div class="form-group col-sm-2">
+            <button type="submit" class="btn btn-primary">查询</button>
+          </div>
+          <div style="margin-top: 10px;" class="form-group col-sm-12">
+            <h6>{{totalCountText}}</h6>
+          </div>
+          <div class="form-group col-sm-12">
+            <label class="form-control-label">单价&nbsp;</label>
+            <input type="text" ng-model="price"/><span>&nbsp;(元/次)</span>
+            <label class="col-sm-2">{{totalPrice}}</label>
+            <a class="col-sm-2" ng-click="downFile()" href="">下载报表</a>
+          </div>
+        </form>
+        <div style="margin-top: 10px;">
+            <canvas id="line" height="100%" class="chart chart-line" chart-data="data"
+            chart-labels="labels" chart-series="series" chart-options="options"
+            chart-dataset-override="datasetOverride" chart-click="onClick">
+            </canvas>
+        </div>
+        <div style="margin-top: 10px;">
+          <table class="table table-bordered table-condensed">
+            <tr>
+                <th>日期</th>
+                <th>成功访问量</th>
+                <th>失败访问量</th>
+                <th>访问量累计</th>
+            </tr>
+            <tr dir-paginate="api in apiList  | itemsPerPage: 5" pagination-id="apiList">
+              <td>{{api.date}}</td>
+              <td>{{api.success}}</td>
+              <td>{{api.fail}}</td>
+              <td>{{api.success + api.fail}}</td>
+            </tr>
+          </table>
+          <div style="float:right">
+            <dir-pagination-controls pagination-id="apiList"></dir-pagination-controls>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

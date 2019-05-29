@@ -1,0 +1,23 @@
+<!--
+  Copyright 2018 maan.ai
+  sidebar.html 左侧栏
+-->
+<div class="sidebar" ng-controller="SideBarController">
+    <nav class="sidebar-nav">
+        <ul class="nav" >
+            <li class="nav-item">
+                <a class="nav-link" ng-class="{active: $route.current.activePage == 'statistics'}" href="#!/statistics"><i class="fa fa-chart-bar"></i>统计报表</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" ng-class="{active: $route.current.activePage == 'channels'}" href="#!/channel"><i class="icon-settings"></i>渠道接口管理</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" ng-class="{active: $route.current.activePage == 'vendors'}" href="#!/vendor"><i class="icon-settings"></i>厂商管理</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" ng-class="{active: $route.current.activePage == 'views'}" href="#!/views"><i class="icon-people"></i>访问量配置</a>
+            </li>
+            <li class="divider"></li>
+        </ul>
+    </nav>
+</div>
