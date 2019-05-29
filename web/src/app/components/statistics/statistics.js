@@ -21,7 +21,7 @@ function StatisticsController($scope, $http) {
     return result;
   }
   
-  $scope.vendors = ["创蓝科技", "全部"]
+  $scope.vendors = ["创蓝科技", "酷曼测试"]
   $scope.channels = ["安全卫士短信接口"]
   var startTime = moment().subtract(1, 'days');
   var endTime = moment().add('days');
@@ -93,16 +93,19 @@ function StatisticsController($scope, $http) {
   };
 
   $scope.submit = function(){
-    console.log("startTime: " + startTime + "endTime: " + endTime);
+    // console.log("startTime: " + startTime + "endTime: " + endTime);
+    // console.log("vendor: " + $scope.selVendor);
     // startTime = Math.floor(start/1000);
     // endTime = Math.floor(end/1000);
     $scope.labels = [];
     $scope.data = [];
     $scope.apiList = [];
     totalCount = 0;
+    var manufacturer = $scope.selVendor == $scope.vendors[0]?1:2;
+    var channel = 1;
     $http({
       method:'GET',
-      url: api_out_v1 +  '/coomaan/sms_backend/api/apiaccess/?channel=1&manufacturer=1&start='
+      url: api_out_v1 +  '/coomaan/sms_backend/api/apiaccess/?channel='+channel+'&manufacturer='+manufacturer+'&start='
        + Math.floor(startTime/1000)+'&stop=' + Math.floor(endTime/1000)
     }).then(res => {
       console.log(res.data);
